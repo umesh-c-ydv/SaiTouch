@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    android:gravity="top" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/photoControlLayout"
+        android:gravity="center_vertical|center_horizontal|">
+        <Button 
+            android:id="@+id/prev"
+            android:layout_width="40dp"
+	        android:layout_height="100dp"
+	        android:background="@drawable/custom_prev_photo"
+	        android:layout_marginRight="100dp"
+	        android:gravity="center_vertical|left" 
+            />
+        
+       <Button
+	        android:id="@+id/ib_stop_and_play"
+	        android:layout_width="100dp"
+	        android:layout_height="100dp"
+	        android:background="@drawable/audio_pause"
+	        android:gravity="center_vertical|center_horizontal" />
+	   
+       <Button 
+            android:id="@+id/next"
+            android:layout_width="40dp"
+	        android:layout_height="100dp"
+	        android:layout_marginLeft="100dp"
+	        android:background="@drawable/custom_next_photo"
+	        android:gravity="center_vertical|right" 
+            />    
+        
+    </LinearLayout>
+
+   
+    
+</RelativeLayout>

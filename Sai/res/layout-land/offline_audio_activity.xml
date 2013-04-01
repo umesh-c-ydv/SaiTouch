@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    android:id="@+id/mainLayout" >
+
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tlTableContent">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="4"
+            android:id="@+id/Row_1">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="500dp"
+                android:layout_height="330dp"
+                android:layout_weight="3"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/MusicPlayer"
+                    android:layout_width="500dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginTop="240dp"
+                    android:orientation="horizontal"
+                    android:alpha="1" >
+
+                    <Button
+                        android:id="@+id/ibMusicPrev"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_prevsong" 
+                        />
+
+                    <Button
+                        android:id="@+id/ibMusicPlay"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/audio_play_btn" />
+
+                    <Button
+                        android:id="@+id/ibMusicNext"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_nextsong" />
+                </LinearLayout>
+                
+            </LinearLayout>
+
+            <LinearLayout 
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                <LinearLayout
+                    android:id="@+id/MusicPlayerText"
+                    android:layout_width="500dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/border_rectangle"
+                    android:orientation="horizontal" >
+                    <ImageView 
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/icon_play"/>
+                    <TextView 
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/tvSongNameDisplay"
+                        />
+                    
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llHorizontalScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal" 
+                >
+            <Button 
+                android:id="@+id/scrollb"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
+                android:background="@drawable/custom_scroll_left"
+                />
+
+             <HorizontalScrollView
+                 android:layout_width="440dp"
+                 android:layout_height="80dp"
+                 android:gravity="center" 
+                 android:background="@drawable/list_container"
+                 android:id="@+id/Horizontalscroller">
+
+				        <LinearLayout
+				            android:id="@+id/hsvFolderList"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:orientation="horizontal"
+				             />
+   			</HorizontalScrollView>
+   			 <Button 
+   			    android:id="@+id/scrollf" 
+                android:layout_width="30dp"
+                android:layout_height="80dp"
+                android:background="@drawable/custom_scroll_right"
+                />
+   			 </LinearLayout>
+   			 </LinearLayout>
+            <!-- <HorizontalScrollView
+            		android:layout_weight="3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="80dp"
+			        android:gravity="center" >
+				        <LinearLayout
+				            android:id="@+id/hsvFolderList"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:orientation="horizontal"
+				             />
+   		</HorizontalScrollView> -->
+        <LinearLayout
+            android:id="@+id/llTabButtons"
+            android:layout_width="260dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right|bottom"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/bRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/icon_radio_normal"
+                android:gravity="right"
+                android:layout_weight="1"
+                 />
+
+            <Button
+                android:id="@+id/bLocalAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/icon_music_active"
+                android:gravity="right"
+                android:layout_weight="1" />
+        </LinearLayout>    
+            
+        </TableRow>
+        
+    </TableLayout>
+    
+</LinearLayout>

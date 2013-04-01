@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new" >
+
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="4">
+            <LinearLayout
+		        android:id="@+id/linearLayout1"
+                android:layout_width="500dp"
+                android:layout_height="360dp"
+                android:orientation="vertical">
+
+                 <FrameLayout
+                     android:layout_width="500dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="250dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/video_container" >
+                
+		                <com.google.android.youtube.player.YouTubePlayerView
+		                    android:id="@+id/player_view"
+		                   android:layout_width="fill_parent"
+						        android:layout_height="fill_parent"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginTop="10dp"
+						        android:layout_marginRight="15dp"
+						        android:layout_marginBottom="20dp"
+						        android:layout_gravity="center|center_vertical"/>
+		                
+		                <TextView
+                        android:id="@+id/tvVideoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Voice of Sai Bhagavan- playlist 2010"
+                        android:textColor="@android:color/darker_gray" />
+
+                </FrameLayout>
+                <LinearLayout 
+				          android:layout_width="500dp"
+						  android:layout_height="20dp"
+						  >
+				          
+				</LinearLayout>
+   			</LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+                
+            </LinearLayout>
+        </TableRow>
+        
+        <TableRow
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                 >
+
+            <Button 
+                android:id="@+id/scrollb"
+                android:layout_width="30dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/scroll_back"
+                android:visibility="gone"
+                />
+             <HorizontalScrollView
+            		android:layout_width="440dp"
+                 android:layout_height="60dp"
+                 android:background="@drawable/list_container"
+                 android:gravity="center"
+                 android:visibility="gone">
+				        <LinearLayout
+				            android:id="@+id/hsvFolderList"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:orientation="horizontal"
+				             >
+				            
+				        </LinearLayout>
+   			</HorizontalScrollView>
+   			 <Button
+   			    android:id="@+id/scrollf"  
+                android:layout_width="30dp"
+                android:layout_height="60dp"
+                android:background="@drawable/scroll_forward"
+                android:visibility="gone"
+                />
+   			 </LinearLayout>
+   		<LinearLayout
+   		    android:id="@+id/llTabButtons"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"  >
+
+            <Button
+                android:id="@+id/bYouTube"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/youtube_active"
+                android:gravity="right"
+                android:layout_weight="1"
+                 />
+
+            <Button
+                android:id="@+id/bLocalVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/my_videos_normal"
+                android:gravity="right"
+                android:layout_weight="1"  />
+        </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    
+</LinearLayout>
+
